@@ -1,8 +1,12 @@
 class Homestead
   def Homestead.configure(config, settings)
     # Configure The Box
-    config.vm.box = "laravel/homestead"
-    config.vm.hostname = "homestead"
+    config.vm.box = "dws-54"
+
+    # The url from where the 'config.vm.box' box will be fetched if it
+    # doesn't already exist on the user's system.
+    config.vm.box_url = "http://fenix.bcm.com.au/vagrant/dws-54.box"
+    config.vm.hostname = "asmith.dev"
 
     # Configure A Private Network IP
     config.vm.network :private_network, ip: settings["ip"] ||= "192.168.10.10"
@@ -14,6 +18,8 @@ class Homestead
       vb.customize ["modifyvm", :id, "--cpus", settings["cpus"] ||= "1"]
       vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
       vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      vb.customize ["modifyvm", :id, "--natdnsproxy2", "on"]
+      vb.customize ["modifyvm", :id, "--natdnshostresolver2", "on"]
     end
 
     # Configure Port Forwarding To The Box
@@ -54,8 +60,8 @@ class Homestead
             s.inline = "bash /vagrant/scripts/serve-hhvm.sh $1 $2"
             s.args = [site["map"], site["to"]]
           else
-            s.inline = "bash /vagrant/scripts/serve.sh $1 $2"
-            s.args = [site["map"], site["to"]]
+            s.inline = "bash /vagrant/scripts/serve.sh $1 $2 $3"
+            s.args = [site["map"], site["to"], site["logs"]]
           end
       end
     end
@@ -86,6 +92,10 @@ class Homestead
     # Update Composer On Every Provision
     config.vm.provision "shell" do |s|
       s.inline = "/usr/local/bin/composer self-update"
+    end
+
+    config.vm.provision "shell" do |s|
+      s.inline = "bash /vagrant/scripts/restart-web-servers.sh"
     end
   end
 end

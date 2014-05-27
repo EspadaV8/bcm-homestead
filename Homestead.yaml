@@ -9,12 +9,38 @@ keys:
     - ~/.ssh/id_rsa
 
 folders:
-    - map: ~/Code
-      to: /home/vagrant/Code
+    - map: ~/Workspace/indooroopilly/isc
+      to: /home/vagrant/Workspace/indooroopilly/isc
+    - map: ~/Workspace/bcm/website
+      to: /home/vagrant/Workspace/bcm/website
+    - map: ~/Workspace/personal/yourlogicalfallacy
+      to: /home/vagrant/Workspace/personal/yourlogicalfallacy
+    - map: ~/Workspace/dtmr/join-the-drive
+      to: /home/vagrant/Workspace/dtmr/join-the-drive
+    - map: ~/Workspace/sunsuper/dreams-5k
+      to: /home/vagrant/Workspace/sunsuper/dreams-5k
+    - map: ~/Workspace/sunsuper/sunsuperno2dreams
+      to: /home/vagrant/Workspace/sunsuper/sunsuperno2dreams
 
 sites:
-    - map: homestead.app
-      to: /home/vagrant/Code/Laravel/public
+    - map: isc.asmith.dev
+      to: /home/vagrant/Workspace/indooroopilly/isc/www/public_html
+      logs: /home/vagrant/Workspace/indooroopilly/isc/www/logs
+    - map: bcm.asmith.dev
+      to: /home/vagrant/Workspace/bcm/website/www/public_html
+      logs: /home/vagrant/Workspace/bcm/website/www/logs
+    - map: ylf.asmith.dev
+      to: /home/vagrant/Workspace/personal/yourlogicalfallacy/www/public
+      logs: /home/vagrant/Workspace/personal/yourlogicalfallacy/www/logs
+    - map: jtd.asmith.dev
+      to: /home/vagrant/Workspace/dtmr/join-the-drive/www/public_html
+      logs: /home/vagrant/Workspace/dtmr/join-the-drive/www/logs
+    - map: dreams.asmith.dev
+      to: /home/vagrant/Workspace/sunsuper/dreams-5k/www/public_html
+      logs: /home/vagrant/Workspace/sunsuper/dreams-5k/www/logs
+    - map: no2dreams.asmith.dev
+      to: /home/vagrant/Workspace/sunsuper/sunsuperno2dreams/www/public_html
+      logs: /home/vagrant/Workspace/sunsuper/sunsuperno2dreams/www/logs
 
 databases:
     - homestead
