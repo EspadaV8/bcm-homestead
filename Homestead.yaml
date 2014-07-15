@@ -9,18 +9,8 @@ keys:
     - ~/.ssh/id_rsa
 
 folders:
-    - map: ~/Workspace/indooroopilly/isc
-      to: /home/vagrant/Workspace/indooroopilly/isc
-    - map: ~/Workspace/bcm/website
-      to: /home/vagrant/Workspace/bcm/website
-    - map: ~/Workspace/personal/yourlogicalfallacy
-      to: /home/vagrant/Workspace/personal/yourlogicalfallacy
-    - map: ~/Workspace/dtmr/join-the-drive
-      to: /home/vagrant/Workspace/dtmr/join-the-drive
-    - map: ~/Workspace/sunsuper/dreams-5k
-      to: /home/vagrant/Workspace/sunsuper/dreams-5k
-    - map: ~/Workspace/sunsuper/sunsuperno2dreams
-      to: /home/vagrant/Workspace/sunsuper/sunsuperno2dreams
+    - map: ~/Workspace
+      to: /home/vagrant/Workspace
 
 sites:
     - map: isc.asmith.dev
