@@ -31,6 +31,15 @@ sites:
     - map: no2dreams.asmith.dev
       to: /home/vagrant/Workspace/sunsuper/sunsuperno2dreams/www/public_html
       logs: /home/vagrant/Workspace/sunsuper/sunsuperno2dreams/www/logs
+    - map: cube.asmith.dev
+      to: /home/vagrant/Workspace/QUT/cube/www/public_html
+      logs: /home/vagrant/Workspace/QUT/cube/www/logs
+    - map: prospectus.asmith.dev
+      to: /home/vagrant/Workspace/QUT/prospectus/www/public_html
+      logs: /home/vagrant/Workspace/QUT/prospectus/www/logs
+    - map: tweepr.asmith.dev
+      to: /home/vagrant/Workspace/QUT/tweepr-web/
+      logs: /home/vagrant/Workspace/QUT/tweepr-web/logs
 
 databases:
     - homestead
