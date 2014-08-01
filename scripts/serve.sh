@@ -77,6 +77,26 @@ block="<VirtualHost 127.0.0.1:8001>
     ErrorLog                    $3/error.log
     CustomLog                   $3/access.log combined
     php_admin_value error_log   $3/php.error.log
+
+    <IfModule mpm_itk_module>
+        AssignUserId vagrant vagrant
+    </IfModule>
+
+    <IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresByType image/gif \"access plus 1 months\"
+        ExpiresByType image/jpg \"access plus 1 months\"
+        ExpiresByType image/jpeg \"access plus 1 months\"
+        ExpiresByType image/png \"access plus 1 months\"
+        ExpiresByType image/vnd.microsoft.icon \"access plus 1 months\"
+        ExpiresByType image/x-icon \"access plus 1 months\"
+        ExpiresByType image/ico \"access plus 1 months\"
+        ExpiresByType application/javascript \"now plus 1 months\"
+        ExpiresByType application/x-javascript \"now plus 1 months\"
+        ExpiresByType text/javascript \"now plus 1 months\"
+        ExpiresByType text/css \"now plus 1 months\"
+        ExpiresDefault \"access plus 1 days\"
+    </IfModule>
 </VirtualHost>"
 echo "$block" > "/etc/apache2/sites-available/$1"
 ln -fs "/etc/apache2/sites-available/$1" "/etc/apache2/sites-enabled/$1"
