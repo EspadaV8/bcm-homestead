@@ -48,6 +48,16 @@ class Homestead
       s.inline = "cp /vagrant/aliases /home/vagrant/.bash_aliases"
     end
 
+    # Delete existing nginx sites
+    config.vm.provision "shell" do |s|
+      s.inline = "rm /etc/nginx/sites-enabled/*"
+    end
+
+    # Delete existing apache2 sites
+    config.vm.provision "shell" do |s|
+      s.inline = "rm /etc/apache2/sites-enabled/*"
+    end
+
     # Register All Of The Configured Shared Folders
     settings["folders"].each do |folder|
       config.vm.synced_folder folder["map"], folder["to"], type: folder["type"] ||= nil
