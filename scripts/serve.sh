@@ -68,8 +68,6 @@ server {
 
 echo "$block" > "/etc/nginx/sites-available/$1"
 ln -fs "/etc/nginx/sites-available/$1" "/etc/nginx/sites-enabled/$1"
-service nginx restart
-service php5-fpm restart
 
 block="<VirtualHost 127.0.0.1:8001>
     ServerName                  $1
