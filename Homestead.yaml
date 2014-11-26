@@ -13,6 +13,14 @@ folders:
       to: /home/vagrant/Workspace
 
 sites:
+    - map: 50cars.asmith.dev
+      to: /home/vagrant/Workspace/leo-muller/50cars/www/public_html
+      logs: /home/vagrant/Workspace/leo-muller/50cars/www/logs
+
+    - map: bbd.asmith.dev
+      to: /home/vagrant/Workspace/bbd/bbd-website/www/public_html
+      logs: /home/vagrant/Workspace/bbd/bbd-website/www/logs
+
     - map: bcm.asmith.dev
       to: /home/vagrant/Workspace/bcm/website/www/public_html
       logs: /home/vagrant/Workspace/bcm/website/www/logs
@@ -29,6 +37,10 @@ sites:
       to: /home/vagrant/Workspace/sunsuper/dreams-5k/www/public_html
       logs: /home/vagrant/Workspace/sunsuper/dreams-5k/www/logs
 
+    - map: dfbw.asmith.dev
+      to: /home/vagrant/Workspace/sunsuper/sun-dreams-for-a-better-world/www/public_html
+      logs: /home/vagrant/Workspace/sunsuper/sun-dreams-for-a-better-world/www/logs
+
     - map: isc.asmith.dev
       to: /home/vagrant/Workspace/indooroopilly/isc/www/public_html
       logs: /home/vagrant/Workspace/indooroopilly/isc/www/logs
@@ -41,10 +53,6 @@ sites:
       to: /home/vagrant/Workspace/dtmr/join-the-drive-evolution/www/public
       logs: /home/vagrant/Workspace/dtmr/join-the-drive-evolution/www/logs
 
-    - map: no2dreams.asmith.dev
-      to: /home/vagrant/Workspace/sunsuper/sunsuperno2dreams/www/public_html
-      logs: /home/vagrant/Workspace/sunsuper/sunsuperno2dreams/www/logs
-
     - map: prospectus.asmith.dev
       to: /home/vagrant/Workspace/QUT/prospectus/www/public_html
       logs: /home/vagrant/Workspace/QUT/prospectus/www/logs
@@ -54,7 +62,7 @@ sites:
       logs: /home/vagrant/Workspace/dtmr/share-the-road/www/logs
 
     - map: theportfolio.asmith.dev
-      to: /home/vagrant/Workspace/bcm/theportfolio/www/public
+      to: /home/vagrant/Workspace/bcm/theportfolio/www/public_html
       logs: /home/vagrant/Workspace/bcm/theportfolio/www/logs
 
     - map: tweepr.asmith.dev
