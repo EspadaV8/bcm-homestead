@@ -50,12 +50,12 @@ class Homestead
 
     # Delete existing nginx sites
     config.vm.provision "shell" do |s|
-      s.inline = "rm /etc/nginx/sites-enabled/*"
+      s.inline = "rm -rf /etc/nginx/sites-enabled/*"
     end
 
     # Delete existing apache2 sites
     config.vm.provision "shell" do |s|
-      s.inline = "rm /etc/apache2/sites-enabled/*"
+      s.inline = "rm -rf /etc/apache2/sites-enabled/*"
     end
 
     # Register All Of The Configured Shared Folders
