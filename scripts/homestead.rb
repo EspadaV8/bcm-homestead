@@ -104,7 +104,7 @@ class Homestead
       s.inline = "/usr/local/bin/composer self-update"
     end
 
-    config.vm.provision "shell" do |s|
+    config.vm.provision "shell", run: "always" do |s|
       s.inline = "bash /vagrant/scripts/restart-web-servers.sh"
     end
   end
