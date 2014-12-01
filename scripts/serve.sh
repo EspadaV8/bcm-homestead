@@ -14,6 +14,7 @@ block="server {
     root $2;
 
     charset utf-8;
+    client_max_body_size 10M;
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location = /robots.txt  { access_log off; log_not_found off; }
@@ -37,6 +38,7 @@ server {
     root $2;
 
     charset utf-8;
+    client_max_body_size 10M;
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location = /robots.txt  { access_log off; log_not_found off; }
