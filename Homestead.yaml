@@ -4,6 +4,9 @@ memory: 2048
 cpus: 1
 hostname: 'asmith.dev'
 
+db_username: root
+db_password: vagrant
+
 authorize: ~/.ssh/id_rsa.pub
 
 keys:
