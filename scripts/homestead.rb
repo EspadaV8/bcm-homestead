@@ -6,7 +6,7 @@ class Homestead
     # The url from where the 'config.vm.box' box will be fetched if it
     # doesn't already exist on the user's system.
     config.vm.box_url = "http://fenix.bcm.com.au/vagrant/dws-54.box"
-    config.vm.hostname = "asmith.dev"
+    config.vm.hostname = settings["hostname"]
 
     # Configure A Private Network IP
     config.vm.network :private_network, ip: settings["ip"] ||= "192.168.10.10"
