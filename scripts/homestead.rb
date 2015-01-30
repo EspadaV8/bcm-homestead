@@ -2,7 +2,7 @@ class Homestead
   def Homestead.configure(config, settings)
     # The url from where the 'config.vm.box' box will be fetched if it
     # doesn't already exist on the user's system.
-    config.vm.box = "Espadav8/dws-7"
+    config.vm.box = "EspadaV8/dws-7"
     config.vm.hostname = settings["hostname"]
 
     # Configure A Private Network IP
