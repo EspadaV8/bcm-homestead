@@ -1,12 +1,6 @@
 #!/usr/bin/env bash
 
-FILENAME="$1"
-
-if [[ $1 == *"*"* ]]
-then
-    HASH=`echo $1 | md5sum | cut -f1 -d" "`
-    FILENAME="${1/\*/$HASH}"
-fi
+FILENAME="${1/\*/laravel_wildcard}"
 
 mkdir /etc/nginx/ssl 2>/dev/null
 openssl genrsa -out "/etc/nginx/ssl/$FILENAME.key" 1024 2>/dev/null
